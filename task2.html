@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Centered Page</title>
+
+    <!-- Bootstrap CSS CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        th {
+            width: 180px;
+            height: 50px;
+            background-color: #EEA29A;
+            color: white;
+        }
+
+        td {
+            height: 30px;
+            background-color: yellow;
+        }
+
+        button {
+            width: 100px;
+            height: 40px;
+            background-color: rgb(25, 25, 53);
+            color: white;
+            border: none;
+            border-radius: 20px;
+        }
+
+        li {
+            color: darkmagenta;
+        }
+
+        dt {
+            color: rgb(83, 128, 0);
+        }
+
+        dd {
+            color: darkmagenta;
+        }
+    </style>
+</head>
+
+<body style="background-color: #DEEAEE;">
+    <div class="container py-4 text-center">
+        <h1 class="bg-danger text-white border border-dark py-4">Welcome to the HTML Tag Demo Page</h1>
+
+        <h2 class="text-danger">Anchor Tag</h2>
+        <a href="https://catalystprogrammers.in/">catalystprogrammers</a><br>
+        <a href="#form">Forms</a><br>
+        <a href="#table">Table</a><br>
+        <a href="#list">List</a>
+        <hr>
+
+        <h2 class="text-danger">Text Formatting Tags</h2>
+        <p>This tag is used for = <b style="color: tomato;">bold text</b></p>
+        <p>This tag is used for = <i style="color: slateblue;">italic text</i></p>
+        <p>This tag is used for = <strong style="color: chartreuse;">important text</strong></p>
+        <p>This tag is used for = <mark>Marked text</mark></p>
+        <p>This tag is used for = <small style="color: red;">small text</small></p>
+        <p>This tag is used for = <del style="color:blue;">Deleted text</del></p>
+        <p>This tag is used for = <ins style="color: darkmagenta;">Inserted text</ins></p>
+        <p>This tag is used for = <sub style="color: darkmagenta;">Subscript text</sub></p>
+        <p>This tag is used for = <sup style="color: darkred;">Superscript text</sup></p>
+        <hr>
+
+        <h2 id="list" class="text-warning">Lists</h2>
+        <h4 class="text-danger">Unordered List</h4>
+        <ul class="list-unstyled">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+        </ul>
+        <h4 class="text-danger">Ordered List</h4>
+        <ol class="list-unstyled">
+            <li>Python</li>
+            <li>Java</li>
+            <li>Node js</li>
+        </ol>
+
+        <h4 class="text-danger">Description List</h4>
+        <dl>
+            <dt>Coffee</dt>
+            <dd>Black hot drink</dd>
+            <dt>Milk</dt>
+            <dd>White cold drink</dd>
+        </dl>
+        <hr>
+
+        <h2 id="table" class="text-primary">Table Example</h2>
+        <div class="table-responsive d-flex justify-content-center">
+            <table border="" class="text-center">
+                <tr>
+                    <th>Name</th>
+                    <th>Role</th>
+                </tr>
+                <tr>
+                    <td>Manisha</td>
+                    <td>Developer</td>
+                </tr>
+                <tr>
+                    <td>Nishu</td>
+                    <td>Designer</td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+
+        <h2 class="text-danger">Media Tags</h2>
+        <h4>Image</h4>
+        <img src="" alt="Placeholder Image" class="img-fluid"><br><br>
+
+        <h2 class="text-danger">Audio Sample</h2>
+        <audio controls>
+            <source src="horse.ogg" type="audio/ogg">
+        </audio>
+        <hr>
+
+        <h2 class="text-danger">Video</h2>
+        <video width="500" height="300" controls>
+            <source src="sample-video.mp4" type="video/mp4">
+        </video>
+        <hr>
+
+        <h2 id="form" class="text-danger">Form</h2>
+        <form class="w-50 mx-auto">
+            <label class="text-darkmagenta">Name</label><br>
+            <input type="text" placeholder="Enter your name" class="form-control mb-3">
+
+            <label class="text-darkmagenta">Email</label><br>
+            <input type="email" placeholder="Enter Email Address" class="form-control mb-3">
+
+            <label class="text-darkmagenta">Type your message</label><br>
+            <textarea class="form-control mb-3"></textarea>
+
+            <label class="text-darkmagenta">Gender:</label><br>
+            <div class="form-check">
+                <input type="radio" name="gender" id="male" value="male" class="form-check-input">
+                <label for="male" class="form-check-label text-brown">Male</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" name="gender" id="female" value="female" class="form-check-input">
+                <label for="female" class="form-check-label text-brown">Female</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" name="gender" id="other" value="other" class="form-check-input">
+                <label for="other" class="form-check-label text-brown">Other</label>
+            </div>
+
+            <br>
+            <label class="text-darkmagenta">Hobby</label><br>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="read">
+                <label for="read" class="form-check-label">Reading</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="dance">
+                <label for="dance" class="form-check-label">Dancing</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="cricket">
+                <label for="cricket" class="form-check-label">Watching cricket</label>
+            </div>
+
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+        <hr>
+
+        <h2 class="text-danger">Article Title</h2>
+        <p class="text-secondary">This is a sample article element with real semantic meaning.</p>
+    </div>
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

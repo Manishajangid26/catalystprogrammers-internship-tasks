@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light d-flex justify-content-center align-items-center vh-100">
+    <div class="card p-4 shadow-lg" style="width: 100%; max-width: 400px;">
+        <h3 class="text-center mb-4 text-primary">Simple Calculator</h3>
+
+        <input type="text" name="inputbox" id="inp1" class="form-control mb-3">
+        <input type="text" name="inputbox" id="inp2" class="form-control">
+
+     <br><br>
+       <div  class="mb-3 d-flex justify-content-center gap-2" style="border-radius: 20px;">
+        <button class=" btn btn-success" onclick="message('+',)" id="btn">add</button>
+        <button class=" btn btn-success" onclick="message('-')" id="btn">sub</button>
+        <button class=" btn btn-success" onclick="message('*')" id="btn">mul</button>
+        <button class=" btn btn-success" onclick="message('/')" id="btn">div</button>
+        <button class=" btn btn-success" onclick="message('%')" id="btn">rem</button>
+
+       </div>
+       <div class="mt-4 alert alert-info text-center" id="heading" style="display: none;">
+
+    </div>
+
+    </div>
+     
+    
+    <!-- <h1 id="heading"></h1> -->
+
+    <script>
+        const message = (operator) => {
+           const data = parseFloat(document.getElementById("inp1").value)
+           const data1 = parseFloat(document.getElementById("inp2").value)
+           let a
+           if (isNaN(data) || isNaN(data1)) {
+        alert(" Please enter only numbers, not alphabets.");
+        return;
+      }
+           switch(operator){
+            case "+":
+                a=data+data1
+            break;    
+            case "-":
+                a=data-data1
+            break;    
+            case "*":
+                a=data*data1
+            break;    
+            case "/":
+                a=data/data1
+            break;    
+            case "%":
+                a=data%data1
+            break;   
+             default:
+            a = "Invalid Operation";                 
+           }
+            heading = document.getElementById("heading")
+            heading.innerText = "Result: " + a;
+            heading.style.display = "block";
+        }
+       
+    </script>
+</body>
+</html>
